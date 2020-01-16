@@ -1,30 +1,68 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React from "react";
+import { NavLink } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
-const logo = require('../images/receta_logo.png')
+import { Button } from "../shared/Button";
+const logo = require("../images/receta_logo.png");
 
-const Nav = () => {
+class Nav extends React.Component {
+  state = {
+    modal: false
+  };
+
+  handleModal = () => {
+    this.setState({ modal: !this.state.modal });
+    console.log("helloworld");
+  };
+
+  renderLinks = () => {
     return (
-        <nav> 
-            {/* NavLinks will be needed inside the hamburger button */}
-            {/* <NavLink exact to='/'>
-                Enter Logo Here
-            </NavLink>
+      <nav>
+        <NavLink exact to="/">
+          <img src={logo} className="logo" />
+        </NavLink>
 
-            <NavLink exact to='/recipes'>
-                all_recipes
-            </NavLink>
+        <Button
+          title={<GiHamburgerMenu size={50} />}
+          className="open-modal"
+          onClick={() => this.handleModal()}
+        />
+      </nav>
+    );
+  };
 
-            <NavLink exact to='/recipes/create'>
-                post_recipe
-            </NavLink> */}
+  renderNavModal = () => {
+    if (this.state.modal) {
+      return (
+        <div>
+          <Button
+            title="X"
+            className="close-modal"
+            onClick={() => this.handleModal()}
+          />
+          <NavLink exact to="/">
+            Home
+          </NavLink>
 
-            <GiHamburgerMenu size={50}/>
-            <img src={logo} className='logo'/>
+          <NavLink exact to="/recipes">
+            all_recipes
+          </NavLink>
 
-        </nav>
+          <NavLink exact to="/recipes/create">
+            post_recipe
+          </NavLink>
+        </div>
+      );
+    }
+  };
 
-    )
+  render() {
+    return (
+      <>
+        {this.renderLinks()}
+        {this.renderNavModal()}
+      </>
+    );
+  }
 }
 
-export default Nav
+export default Nav;

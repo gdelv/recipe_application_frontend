@@ -64,7 +64,7 @@ class Recipes extends React.Component {
               
               </div>
               <p>{recipe.description.slice(0,100) + "..."}</p>
-              <Button title="More" className="more-button" />
+              <Button title="More" className="more-button" onClick={() => history.push(`${path}/${recipe.id}`)}/>
               <Button title='X' className='delete' onClick={() => this.handleOpenModal(recipe, index)}/>
               <Button title='Edit' className='edit' onClick={() => history.push(`${path}/edit/${recipe.id}`)}/>
               <h3>Posted by: {recipe.author}</h3>
