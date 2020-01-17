@@ -8,13 +8,13 @@ const Landing = (props) => {
     return (
         <div>
             <img src={landingImage} className='landing-image'/>
-            <form>
+            {/* <form>
             <Input
                 className='search-bar'
                 placeholder='find recipe'
             />
             <input type="submit" value="submit"/>
-            </form>
+            </form> */}
         
         </div>
     )

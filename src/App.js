@@ -7,19 +7,22 @@ import { Button } from "./shared/Button";
 
 class App extends React.Component {
   state = {
-    mode: ""
+    mode: "",
+    name: ""
   };
 
   handleDarkMode = () => {
     if ((this.state.mode.length === 0)) {
       this.setState({ 
-        mode: "dark-mode"
+        mode: "dark-mode",
+        name: "Light"
       });
       console.log("helllllo dark world");
     }
     else if (this.state.mode.length > 0)
     this.setState({
-      mode: ""
+      mode: "",
+      name: "Dark"
     })
     console.log("helllllo light world");
 
@@ -30,7 +33,7 @@ class App extends React.Component {
       <div className={this.state.mode}>
         <header>
           <Button
-            title="DARK"
+            title={this.state.name}
             className="dark-mode-button"
             onClick={() => this.handleDarkMode()}
           />

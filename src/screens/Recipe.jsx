@@ -1,5 +1,7 @@
 import React from "react";
 import { api } from "../ApiConfig";
+import { IoIosTimer } from "react-icons/io";
+import { MdRoomService, MdLocalDining } from "react-icons/md";
 
 class Recipe extends React.Component {
   state = {
@@ -59,19 +61,23 @@ class Recipe extends React.Component {
           <h4>{`Recipe By ${this.state.author}`}</h4>
           <p>{this.state.description}</p>
         </div>
-        <div>
+        <div className="card-image-container">
           <div>
             <img src={this.state.img} />
           </div>
-          <div>
-    <h5>{this.state.prep_time}</h5>
-  <h5>{this.state.serving_size}</h5>
-    <h5>{this.state.calories_count}</h5>
+
+          <div className="card-info-container">
+            <IoIosTimer style={{ marginTop: "5%", padding: "0 .2em" }} />
+            <h5>{this.state.prep_time} Minutes</h5>
+            <MdRoomService style={{ marginTop: "5%", padding: "0 .2em" }} />
+            <h5>{this.state.serving_size} Servings</h5>
+            <MdLocalDining style={{ marginTop: "5%", padding: "0 .2em" }} />
+            <h5>{this.state.calories_count} Calories</h5>
           </div>
         </div>
-        <div>
-    <p>{this.state.ingredients}</p>
-  <p>{this.state.directions}</p>
+        <div className="card-bottom-container">
+          <p>Ingredients: {this.state.ingredients}</p>
+          <p>Directions: {this.state.directions}</p>
         </div>
       </>
     );

@@ -1,7 +1,10 @@
-.dark-mode, .dark-mode nav, .dark-mode main, .dark-mode footer  {
-  background-color: red;
+.dark-mode, .dark-mode nav, .dark-mode main, .dark-mode .dark-mode-button, .dark-mode footer  {
+  background-color:#2A2B2A;
 }
 
+/* .dark-mode .dark-mode-button {
+  background-color: #FFF2E2;
+} */
 .modal {
   z-index: 1003;
   /* display: inline-block; */
@@ -11,7 +14,7 @@
   left: 25%; 
   width: 50%;
   /* height: 20%; */
-  top: 50%;
+  top: 30%;
   border-radius: 30px;
   padding:5px;
   color:white;
@@ -23,6 +26,7 @@
   background-color: #FFF2E2;
   color: black;
   margin-left: 3em;
+  padding: .1em .5em;
 }
 
 .modal .modal-button-container {
@@ -71,6 +75,13 @@
   opacity: .6;
   z-index: -1;
 }
+.recipes-title {
+  color: white;
+  font-family: 'Just Another Hand', cursive;
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 3em;
+}
 
 nav {
   /* border: 2px solid green; */
@@ -84,6 +95,12 @@ nav {
 header .logo {
   max-width: 60%;
   max-height: 10vh;
+  border-radius: 50%;
+}
+footer .footer-logo {
+  border-radius: 50%;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 .landing-image {
   height: 90vh;
@@ -167,5 +184,90 @@ footer .social-media-links {
 }
 
 footer .social-media-links a {
-  padding: .25em 1em;
+  padding: .25em .5em;
 }
+
+.delete {
+  position: absolute;
+  left: 10%;
+  padding: .5em 1em;
+  font-size: 1.2em;
+}
+
+.card-top-container {
+  /* border: 2px solid red; */
+  text-align: center;
+  padding: .5em 1em;
+  font-family: 'Just Another Hand', cursive;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #FFF2E2;
+}
+
+.card-top-container h2 {
+  font-size: 60px;
+  padding: 0em;
+  margin: .5em;
+}
+
+.card-image-container {
+  max-height: fit-content;
+  max-width: fit-content;
+  margin: auto;
+  /* border: 2px solid green; */
+  display:  flex;
+  flex-direction: column;
+}
+.card-image-container img {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  /* border: 2px solid red; */
+}
+
+.card-info-container {
+  /* border: 2px solid red; */
+  display: flex;
+  font-family: 'Just Another Hand', cursive;
+  letter-spacing: 3px;
+  font-size: 1.5em;
+  color: #FFF2E2;
+
+  padding: .5em;
+}
+
+.card-bottom-container {
+  text-align: center;
+  color: #FFF2E2;
+  font-family: 'Just Another Hand', cursive;
+  font-size: 35px;
+  padding: .5em;
+}
+
+.recipe-form h3 {
+  margin: 4em 0 1em;
+  color: #FFF2E2;
+  text-align: center;
+}
+.submit {
+  position: relative;
+  width: 40%;
+  left: 30%;
+  margin: 1em 0;
+}
+
+.edit-page h3 {
+  margin: 4em 0 1em;
+  color: #FFF2E2;
+  text-align: center;
+}
+
+.dark-mode-button {
+  position: absolute;
+  top: 12%;
+  left: 2%;
+  color: rgb(143, 143, 143);
+  background-color: #FFF2E2;
+  border: 1px solid white;
+}
+

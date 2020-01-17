@@ -52,7 +52,6 @@ class Recipes extends React.Component {
     } = this.props
     return (
       <>
-        {/* <Nav/> */}
         {this.state.recipes.map((recipe,index) => {
           return (
             <div key={recipe.id} className="recipe-card">
@@ -106,7 +105,7 @@ class Recipes extends React.Component {
   render() {
     return (
       <>
-        <h1>All Recipes</h1>
+        <h1 className='recipes-title'>All Recipes</h1>
         {this.renderRecipes()}
         {/* {this.renderDeleteConfirmModal()} */}
       </>

@@ -7,13 +7,14 @@ button {
 	border-radius: 30px;
 	box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.3);
 	background-color: #000a42;
+	border: 2px solid white;
 	color:white;
 }
 
 button:hover {
 	transform: scale(0.9);
 	background-color: #FFF2E2;
-	color:#C41130;
+	/* color:#C41130; */
 	border:2px solid #000a42;
 
 }

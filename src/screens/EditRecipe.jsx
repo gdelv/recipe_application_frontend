@@ -101,7 +101,7 @@ class EditRecipe extends React.Component {
       directions
     } = this.state;
     return (
-      <div>
+      <div className='edit-page'>
         <h3>Change your recipe</h3>
         <RecipeForm
           formData={{
