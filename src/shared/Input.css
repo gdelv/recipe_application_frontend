@@ -50,23 +50,4 @@
     padding: .5em;
 }
 
-/* .input input:focus + label,
-.input input:active + label,
-.input input:valid + label {
-	transform: translateY(-1.4em);
-	color:transparent;
-} */
 
-/* @media screen and (min-width: 600px) {
-	.input label {
-	right: 9em;
-	top: 1em;
-	}
-}
-
-@media screen and (min-width: 1000px) {
-	.input label {
-	right: 13em;
-	top: 1em;
-	}
-} */

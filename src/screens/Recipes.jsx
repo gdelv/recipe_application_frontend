@@ -15,7 +15,7 @@ class Recipes extends React.Component {
   }
 
   getRecipes() {
-    fetch("http://localhost:3000/recipes")
+    fetch(`https://g-recipe-app.herokuapp.com/recipes`)
       .then(response => response.json())
       .then(jsonedRecipes => this.setState({ recipes: jsonedRecipes }))
       .catch(error => console.error(error));
@@ -106,7 +106,9 @@ class Recipes extends React.Component {
     return (
       <>
         <h1 className='recipes-title'>All Recipes</h1>
+        <div className='recipes-container'>
         {this.renderRecipes()}
+        </div>
         {/* {this.renderDeleteConfirmModal()} */}
       </>
     )

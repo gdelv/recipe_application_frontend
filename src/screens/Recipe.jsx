@@ -67,11 +67,11 @@ class Recipe extends React.Component {
           </div>
 
           <div className="card-info-container">
-            <IoIosTimer style={{ marginTop: "5%", padding: "0 .2em" }} />
+            <IoIosTimer style={{ padding: "0 .2em" }} />
             <h5>{this.state.prep_time} Minutes</h5>
-            <MdRoomService style={{ marginTop: "5%", padding: "0 .2em" }} />
+            <MdRoomService style={{ padding: "0 .2em" }} />
             <h5>{this.state.serving_size} Servings</h5>
-            <MdLocalDining style={{ marginTop: "5%", padding: "0 .2em" }} />
+            <MdLocalDining style={{ padding: "0 .2em" }} />
             <h5>{this.state.calories_count} Calories</h5>
           </div>
         </div>

@@ -2,9 +2,7 @@
   background-color:#2A2B2A;
 }
 
-/* .dark-mode .dark-mode-button {
-  background-color: #FFF2E2;
-} */
+
 .modal {
   z-index: 1003;
   /* display: inline-block; */
@@ -132,6 +130,7 @@ body .recipe-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10%;
 }
 
 body .recipe-card img {
@@ -228,6 +227,7 @@ footer .social-media-links a {
 .card-info-container {
   /* border: 2px solid red; */
   display: flex;
+  justify-content: space-evenly;
   font-family: 'Just Another Hand', cursive;
   letter-spacing: 3px;
   font-size: 1.5em;
@@ -270,4 +270,40 @@ footer .social-media-links a {
   background-color: #FFF2E2;
   border: 1px solid white;
 }
+
+@media screen and (min-width: 1100px) {
+  .recipes-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* border: 2px solid red; */
+    /* position: relative; */
+    margin: 0 2em;
+  }
+
+  .recipe-card {
+    max-width: 25%;
+    margin: 1em 2em;
+  }
+  .recipe-card p {
+    height: 3em;
+    margin: .5em;
+  }
+
+  .delete {
+    position: relative;
+    left: -30%;
+    top: -70%;
+  }
+
+  div .input {
+    left: 25%;
+    }
+  div .input label {
+    left: 30%;
+  }
+  
+}
+
 

@@ -8,7 +8,7 @@ import { Button } from "./shared/Button";
 class App extends React.Component {
   state = {
     mode: "",
-    name: ""
+    name: "Dark"
   };
 
   handleDarkMode = () => {
