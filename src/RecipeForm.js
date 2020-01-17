@@ -3,7 +3,7 @@ import { Input } from "./shared/Input";
 import { Button } from "./shared/Button";
 
 const RecipeForm = (props) => {
-    const { onChange, onSubmit, onDirectionsStepChange, onAddDirection, onRemoveDirection } = props
+    const { onChange, onSubmit } = props
     const { name, author, img, description, prep_time, serving_size, calories_count, star_rating, directions, ingredients  } = props.formData
 
     return (

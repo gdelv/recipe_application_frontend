@@ -1,13 +1,13 @@
 import React from 'react'
-import { Input } from '../shared/Input'
+// import { Input } from '../shared/Input'
 
 const landingImage = require('../images/chopping.jpg')
 
 const Landing = (props) => {
-    const { history } = props
+    // const { history } = props
     return (
         <div>
-            <img src={landingImage} className='landing-image'/>
+            <img src={landingImage} className='landing-image' alt='landing'/>
             {/* <form>
             <Input
                 className='search-bar'

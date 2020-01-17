@@ -63,7 +63,7 @@ class Recipe extends React.Component {
         </div>
         <div className="card-image-container">
           <div>
-            <img src={this.state.img} />
+            <img src={this.state.img} alt='food'/>
           </div>
 
           <div className="card-info-container">

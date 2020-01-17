@@ -55,7 +55,7 @@ class Recipes extends React.Component {
         {this.state.recipes.map((recipe,index) => {
           return (
             <div key={recipe.id} className="recipe-card">
-              <img src={recipe.img} />
+              <img src={recipe.img} alt='recipe'/>
               <div className='stars-container'>
                 <span className='stars'>{this.showStars(recipe.star_rating)}</span>
                 

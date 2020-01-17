@@ -1,5 +1,6 @@
 {
   "name": "recipe_app_client",
+  "homepage" : "http://recipe.surge.sh",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

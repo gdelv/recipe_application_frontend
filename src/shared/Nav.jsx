@@ -24,7 +24,7 @@ class Nav extends React.Component {
         />
 
         <NavLink exact to="/">
-          <img src={logo} className="logo" />
+          <img src={logo} className="logo" alt='home-link'/>
         </NavLink>
 
         

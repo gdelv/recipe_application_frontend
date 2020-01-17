@@ -5,7 +5,7 @@ const logo = require("../images/receta_logo.png");
 const Footer = () => {
   return (
     <>
-    <img src={logo} className='footer-logo'/>
+    <img src={logo} className='footer-logo' alt='logo'/>
       <div className='social-media-links'>
         
         <a
