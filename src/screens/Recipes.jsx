@@ -68,9 +68,12 @@ class Recipes extends React.Component {
               <Button title='X' className='delete' onClick={() => this.handleOpenModal(recipe, index)}/>
               <Button title='Edit' className='edit' onClick={() => history.push(`${path}/edit/${recipe.id}`)}/>
               <h3>Posted by: {recipe.author}</h3>
+
             </div>
           );
         })}
+                      {this.renderDeleteConfirmModal()}
+
       </>
     );
   }
@@ -79,15 +82,17 @@ class Recipes extends React.Component {
     if(this.state.toDelete) {
       return (
         <div className='modal'>
-          <h3>Are you sure you want to delete your recipe?</h3>
-          <div>
+    <h3>Are you sure you want to delete your {this.state.recipeToDelete.name} recipe?</h3>
+          <div className='modal-button-container'>
             <Button
               title='Yes'
+              className='yes-button'
               onClick={this.handleDeleteRecipe}
             />
 
             <Button
               title='No'
+              className='no-button'
               onClick={this.handleCloseModal}
             />
           </div>
@@ -103,7 +108,7 @@ class Recipes extends React.Component {
       <>
         <h1>All Recipes</h1>
         {this.renderRecipes()}
-        {this.renderDeleteConfirmModal()}
+        {/* {this.renderDeleteConfirmModal()} */}
       </>
     )
   }

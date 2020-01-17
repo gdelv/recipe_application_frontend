@@ -17,15 +17,17 @@ class Nav extends React.Component {
   renderLinks = () => {
     return (
       <nav>
+        <Button
+          title={<GiHamburgerMenu size={30} />}
+          className="open-modal"
+          onClick={() => this.handleModal()}
+        />
+
         <NavLink exact to="/">
           <img src={logo} className="logo" />
         </NavLink>
 
-        <Button
-          title={<GiHamburgerMenu size={50} />}
-          className="open-modal"
-          onClick={() => this.handleModal()}
-        />
+        
       </nav>
     );
   };
@@ -33,23 +35,26 @@ class Nav extends React.Component {
   renderNavModal = () => {
     if (this.state.modal) {
       return (
-        <div>
+        <div className='hamburger-modal'>
           <Button
             title="X"
             className="close-modal"
             onClick={() => this.handleModal()}
           />
-          <NavLink exact to="/">
+          <div className='hamburger-modal-container'>
+          {/* <NavLink exact to="/" onClick={() => this.handleModal()}>
             Home
-          </NavLink>
+          </NavLink> */}
 
-          <NavLink exact to="/recipes">
+          <NavLink exact to="/recipes" onClick={() => this.handleModal()}>
             all_recipes
           </NavLink>
 
-          <NavLink exact to="/recipes/create">
+          <NavLink exact to="/recipes/create" onClick={() => this.handleModal()}>
             post_recipe
           </NavLink>
+          </div>
+          <div className='overlay'></div>
         </div>
       );
     }

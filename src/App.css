@@ -1,9 +1,83 @@
+.dark-mode, .dark-mode nav, .dark-mode main, .dark-mode footer  {
+  background-color: red;
+}
+
+.modal {
+  z-index: 1003;
+  /* display: inline-block; */
+  position: fixed;
+  background:#0C1428;
+  border: 4px solid red;
+  left: 25%; 
+  width: 50%;
+  /* height: 20%; */
+  top: 50%;
+  border-radius: 30px;
+  padding:5px;
+  color:white;
+}
+.modal h3 {
+  text-align: center;
+}
+.open-modal {
+  background-color: #FFF2E2;
+  color: black;
+  margin-left: 3em;
+}
+
+.modal .modal-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.hamburger-modal {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 45%;
+  background-color: #2A2B2A;
+  z-index: 10000;
+  /* border: 2px solid red; */
+}
+.close-modal {
+  background-color: white;
+  color: black;
+  margin-left: 1em;
+  margin-top: 2em;
+}
+
+.hamburger-modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5em;
+}
+
+.hamburger-modal-container a {
+  margin: 2em;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
+
+.overlay {
+  position: fixed;
+  left: 45%;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: gray;
+  opacity: .6;
+  z-index: -1;
+}
+
 nav {
   /* border: 2px solid green; */
   min-height: 10vh;
   background-color: #FFF2E2;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
 }
 
